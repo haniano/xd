@@ -8,7 +8,6 @@ public abstract class Board {
     }
 }
 
-
 class ChessBoard extends Board{
     @Override
     void setupBoard() {
