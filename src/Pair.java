@@ -15,6 +15,7 @@ public class Pair<A, B> {
         if (!(o instanceof Pair)) {
             return false;
         }
+
         Pair<?, ?> p = (Pair<?, ?>) o;
         return Objects.equals(p.first, first) && Objects.equals(p.second, second);
     }
