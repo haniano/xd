@@ -13,16 +13,17 @@ class ChessBoard extends Board{
     public void setupBoard() {
         for(int i = 0; i<8; i++){
             for(int j=0; j<8; j++)
-                board.get(i).get(j).setSpot(getCorrectSpotInit(i, j));
+                board.get(i).get(j).setSpot(getCorrectSpotChessInit(i, j));
         }
     }
 
 // helpers
-    Spot getCorrectSpotInit(int i, int j){
+    Spot getCorrectSpotChessInit(int i, int j){
         boolean color = getCorrectColor(i, j);
         Spot spot = new ChessSpot(i, j, color);
         // TODO: madrze zakodzic to, jaka figurke zwraca, czy zostaje null
-        spot.setPiece(new Piece());
+        // TODO: no i ogolnie dorobic impl figurek
+        spot.setPiece(new Pawn());
         return spot;
     }
 
